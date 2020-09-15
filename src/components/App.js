@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom';
 import { SignIn } from './';
+import {Slack} from './';
 
 function Home() {
   return (
     <div> Home</div>
   );
 }
-function Some() {
-  return (
-  <div> Some</div>
-  );
-}
+
 
 class App extends Component {
   state = {
@@ -23,7 +20,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={SignIn} />
           <Route exact path="/home" component={Home} />
-          <Route exact path="/some" component={Some} />
+          <Route exact path="/main" component={Slack} />
         </Switch>
       </div>
     );
